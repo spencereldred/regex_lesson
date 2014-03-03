@@ -82,7 +82,7 @@
 * <h3> open "find_replace.rb" in sublime, and follow the instructions within</h3>
 * <h3> run using: $ruby find_replace.rb find_replace_data</h3>
 
-##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+##@@@@@@@@@@@@@@@@@@@@@@@@
 ## Resources
 ### Rubular: regular expression tester: http://www.rubular.com/
 ### Regex Crosswords: http://regexcrossword.com/

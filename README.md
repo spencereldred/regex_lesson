@@ -5,7 +5,7 @@
 	* <h3> test a string to see whether it matches a pattern.</h3>
 	* <h3> extract from a string the sections that match all or part of a pattern.</h3>
 	* <h3> change the string, replacing parts that match a pattern.</h3>
-	
+
 ## Why learn Regular Expressions:
 * <h3> Regular Expressions are a part of many programming languages: Ruby, JS, Perl, Python, Java, unix shell scripts (grep) ...
 * <h3> Regular Expressions are used for pattern matching, find and replace tasks.
@@ -18,9 +18,9 @@
 * <h3> Each character in a regex is either a metacharacter with special meaning, or a regular character with its literal meaning.
 * <h3> Exact pattern matches
 	* <h3> Place exact string between to forward slashes: /cat/ matches "cat"
-	* <h3> However, /cat/ also matches "catastrophe" and "scat" 
+	* <h3> However, /cat/ also matches "catastrophe" and "scat"
 * <h3> Use metacharacters to be more specific on what you match.
-	
+
 ###Matchers: .match and =~
 * <h3> .match(/regex matcher/, "replacement string")
 * <h3> "I love my cat.".match(/cat/)
@@ -45,7 +45,7 @@
 * <h3> Dogs are not dogmatic about dog things unlike Madog the bad dog.
 
 ### Exercise 1:
-* <h3> open "match_string.rb" in sublime, and follow the instructions within 
+* <h3> open "match_string.rb" in sublime, and follow the instructions within
 * <h3> run using: $ruby match_string.rb string_data
 
 ## 2) Select section out of a string
@@ -66,7 +66,7 @@
 * <h3> see file: data_decomp.rb
 
 ### Exercise 2:
-* <h3> open "real_time_data.rb" in sublime, and follow the instructions within 
+* <h3> open "real_time_data.rb" in sublime, and follow the instructions within
 * <h3> run using: $ruby read_time_data.rb time_data
 
 ## 3) Find and replace parts of a string
@@ -79,14 +79,10 @@
 	* <h3> "Red is my favorite color, I just love red".sub(/red/, "blue").sub(/Red/,"Blue")
 
 ### Exercise 3:
-* <h3> open "find_replace.rb" in sublime, and follow the instructions within 
+* <h3> open "find_replace.rb" in sublime, and follow the instructions within
 * <h3> run using: $ruby find_replace.rb find_replace_data
 
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## Resources
 ### Rubular: regular expression tester: http://www.rubular.com/
-
-
-
-
 

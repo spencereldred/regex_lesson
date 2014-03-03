@@ -22,7 +22,7 @@
 * <h3> Use metacharacters to be more specific on what you match.</h3>
 
 ###Matchers: .match and =~
-* <h3> .match(/regex matcher/, "replacement string")</h3>
+* <h3> string.match(/regex matcher/)</h3>
 * <h3> "I love my cat.".match(/cat/)</h3>
 * <h3> match[0] => cat</h3>
 * <h3> "=~" # returns the index location in the string of the first match, can be used in true/false testing because no match return nil (remember in Ruby nil is false).</h3>

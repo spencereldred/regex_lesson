@@ -10,10 +10,22 @@
 
 # Executes file read and .match(line)
 while line = gets
-  line = line.sub()#   find "Whoever", replace with "Hiring Manager"
-  line = line.sub()#   find "Feb 28, 2014", replace with "Mar 4, 2014"
-  line = line.sub()#   find "XYZ" position, replace with "web developer" position
-  line = line.sub()#   find "who knows what company", replace with "your company" (or anything of your choice)
-  line = line.sub()#   find "Yours Truly", replace with your name
+  line = line.sub(/Whoever/, "Hiring Manager")#   find "Whoever", replace with "Hiring Manager"
+  # line = line.sub()#   find "Feb 28, 2014", replace with "Mar 4, 2014"
+  # line = line.sub()#   find "XYZ" position, replace with "web developer" position
+  # line = line.sub()#   find "who knows what company", replace with "your company" (or anything of your choice)
+  # line = line.sub()#   find "Yours Truly", replace with your name
   puts line
 end
+
+# One point for each find/replace - 4 points possible.
+
+# Expected output:
+
+# Dear Hiring Manager,                          Mar 3, 2014
+
+# I want to thank you for the opportunity to speak to you about the web developer position at your company.
+
+# Sincerely,
+
+# Spencer Eldred

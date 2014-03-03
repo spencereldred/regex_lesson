@@ -22,7 +22,7 @@
 * <h3> Use metacharacters to be more specific on what you match.
 	
 ###Matchers: .match and =~
-* <h3> .match(/regex matcher/, "replacement string")
+* <h3> `string.match( /<regex>/ )`
 * <h3> "I love my cat.".match(/cat/)
 * <h3> match[0] => cat
 * <h3> "=~" # returns the index location in the string of the first match, can be used in true/false testing because no match return nil (remember in Ruby nil is false).
@@ -31,14 +31,14 @@
 	* <h3> /cat/ =~ "Cat" # => nil </h3>
 
 ### Metacharacters:
-* <h3> . - wild card, matches any char
-* <h3> \ - escape a character, turns a metacharacter into a string literal - to match a literal period use \\.
-* <h3> | - logical or, /cat|dog/ matches "cat" or "dog"
-* <h3> \s - matches any whitespace
-* <h3> \S - matches any non-whitespace
-* <h3> ^ - start of line
-* <h3> $ - end of line
-* <h3> /cAt/i - "/i" case insensitive, matches Cat, cAt, CAT, CaT, cat ...
+* <h3> `.` - wild card, matches any char
+* <h3> `\` - escape a character, turns a metacharacter into a string literal - to match a literal period use \\.
+* <h3> `|` - logical or, /cat|dog/ matches "cat" or "dog"
+* <h3> `\s` - matches any whitespace
+* <h3> `\S` - matches any non-whitespace
+* <h3> `^` - start of line
+* <h3> `$` - end of line
+* <h3> /cAt/i - `/i` case insensitive, matches Cat, cAt, CAT, CaT, cat ...
 
 ### Whiteboard:
 * <h3> Type this sentence into Rubular (http://www.rubular.com/) and follow along.
@@ -51,14 +51,14 @@
 ## 2) Select section out of a string
 
 ### Metacharacters:
-* <h3> (...) - enclosed matches are assigned variable names $1+ that can be reused
-* <h3> [] - range of characters or numbers to match: [0-9] or [a-z]
-* <h3> \d - any digit, same as [0-9]
-* <h3> \D - any non-digit
-* <h3> {} - exact number of times character or number is repeated, a{2} == "aa"
-* <h3> + - one or more
-* <h3> * - zero or more
-* <h3> ? - zero or one
+* <h3> `(...)` - enclosed matches are assigned variable names $1+ that can be reused
+* <h3> `[ ]` - range of characters or numbers to match: [0-9] or [a-z]
+* <h3> `\d` - any digit, same as [0-9]
+* <h3> `\D` - any non-digit
+* <h3> `{ }` - exact number of times character or number is repeated, a{2} == "aa"
+* <h3> `+` - one or more
+* <h3> `*` - zero or more
+* <h3> `?` - zero or one
 
 ### Whiteboard:
 * <h3> Type this into Rubular (http://www.rubular.com/) and follow along.
@@ -71,9 +71,9 @@
 
 ## 3) Find and replace parts of a string
 
-* <h3> Commands: .sub and .gsub
+* <h3> Commands: `.sub` and `.gsub`
 * <h3> .sub substitutes on first match, .gsub substitutes globally all matches
-* <h3> Syntax: my_string.sub( /sub string to match/ , "replacement sub string" )
+* <h3> Syntax: `my_string.sub( /sub string to match/ , "replacement sub string" )`
 * <h3> "That is a cute dog.".sub(/dog/, "cat") => "That is a cute cat."
 * <h3> Can be chained together:
 	* <h3> "Red is my favorite color, I just love red".sub(/red/, "blue").sub(/Red/,"Blue")
@@ -82,7 +82,7 @@
 * <h3> open "find_replace.rb" in sublime, and follow the instructions within 
 * <h3> run using: $ruby find_replace.rb find_replace_data
 
-##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+##@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## Resources
 ### Rubular: regular expression tester: http://www.rubular.com/
 

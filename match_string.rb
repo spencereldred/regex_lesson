@@ -36,8 +36,8 @@ regex_find_cat_Cat = //
 # Prob 2: The Cat in the Hat.
 # Prob 2: Cat or dog or both?
 
-# 3 points for only these three matches
-# 2 points for only two of the three matches
+# 3 points for only five three matches
+# 2 points for only two or three of the three matches
 # 1 point for only one of the three matchex
 # 0 points otherwise
 

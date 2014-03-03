@@ -2,9 +2,9 @@
 
 ## Student Learning Objectives:
 * <h2> By the end of this lesson you should be able to write regular expressions to:</h2>
-	* <h3> test a string to see whether it matches a pattern.</h3>
-	* <h3> extract from a string the sections that match all or part of a pattern.</h3>
-	* <h3> change the string, replacing parts that match a pattern.</h3>
+	* <h3> 1) test a string to see whether it matches a pattern.</h3>
+	* <h3> 2) extract from a string the sections that match all or part of a pattern.</h3>
+	* <h3> 3) change the string, replacing parts that match a pattern.</h3>
 
 ## Why learn Regular Expressions:
 * <h3> Regular Expressions are a part of many programming languages: Ruby, JS, Perl, Python, Java, unix shell scripts (grep) ...
@@ -85,4 +85,8 @@
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## Resources
 ### Rubular: regular expression tester: http://www.rubular.com/
+### Regex Crosswords: http://regexcrossword.com/
+### Regex Golf: http://regex.alf.nu/
+
+
 

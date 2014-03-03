@@ -14,12 +14,12 @@
 
 ## 1) Match a pattern in a string
 
-* <h3> The strategy is to not only match what you want, but don't match what you don't want.
-* <h3> Each character in a regex is either a metacharacter with special meaning, or a regular character with its literal meaning.
-* <h3> Exact pattern matches
-	* <h3> Place exact string between to forward slashes: /cat/ matches "cat"
-	* <h3> However, /cat/ also matches "catastrophe" and "scat"
-* <h3> Use metacharacters to be more specific on what you match.
+* <h3> The strategy is to not only match what you want, but don't match what you don't want.</h3>
+* <h3> Each character in a regex is either a metacharacter with special meaning, or a regular character with its literal meaning.</h3>
+* <h3> Exact pattern matches</h3>
+	* <h3> Place exact string between to forward slashes: /cat/ matches "cat"</h3>
+	* <h3> However, /cat/ also matches "catastrophe" and "scat"</h3>
+* <h3> Use metacharacters to be more specific on what you match.</h3>
 
 ###Matchers: .match and =~
 * <h3> .match(/regex matcher/, "replacement string")

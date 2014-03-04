@@ -25,14 +25,17 @@
 * <h3> Type this sentence into Rubular (http://www.rubular.com/) and follow along.</h3>
 * <h3> Dogs are not dogmatic about dog things unlike Madog the bad dog.</h3>
 
-###Matchers: .match and =~
+### Ruby Matcher: .match
 * <h3> .match(/regex matcher/, "replacement string")</h3>
 * <h3> "I love my cat.".match(/cat/)</h3>
 * <h3> match[0] => cat</h3>
-* <h3> "=~" # returns the index location in the string of the first match, can be used in true/false testing because no match return nil (remember in Ruby nil is false).</h3>
-  * <h3> /cat/ =~ "cat"      # => 0 </h3>
-  * <h3> /bearcat/ =~ "cat"  # => 4 </h3>
-  * <h3> /cat/ =~ "Cat" # => nil </h3>
+
+    string = "I love my cat."
+
+    if string.match(/cat/)
+      puts "I found a match."
+    end
+
 
 ### Metacharacters:
 * <h3> . - wild card, matches any char</h3>

@@ -6,8 +6,8 @@
 # Fill in regex variable with the regular expression that extracts out the
 # date and time data. regex = /[0-9]{4}/ or regex = /\d{4}/
 
-# Extract Year in $1, Month in $2, Day in $3
-# Extract Hours in $4, Minute in $5, Seconds in $6, Timezone in $7
+# Extract Year in match_data[1], Month in match_data[2], Day in match_data[3] - already done
+# Extract Hours in match_data[4], Minute in match_data[5], Seconds in match_data[6], Timezone in match_data[7]
 
 def read_time_data
 
@@ -16,63 +16,66 @@ def read_time_data
   matches_count = 0
 
   while line = gets
-    regex.match(line)
+    match_data = regex.match(line)
+    # puts line
+    # puts match_data.inspect
 
+    next if match_data == nil
     # Match only Year: 6 matches
-    if $1 && !$2
-      puts "(Year) Year is: " + $1
+    if match_data[1] && !match_data[2]
+      puts "(Year) Year is: " + match_data[1]
       matches_count += 1
       score = 1
     end
 
     # Match (Year && Month) only: 5 matches
-    if $1 && $2 && !$3
-      puts "(Year && Month) Year is: " + $1 + ", Month is: " + $2
+    if match_data[1] && match_data[2] && !match_data[3]
+      puts "(Year && Month) Year is: " + match_data[1] + ", Month is: " + match_data[2]
       matches_count += 1
       score = 2
-    end
+   end
 
     # Match (Year, Month, Day) only: 1 match
-    if $1 && $2 && $3 && !$4
+    if match_data[1] && match_data[2] && match_data[3] && !match_data[4]
       puts "(Year, Month, Day)"
-      puts "Year is: " + $1 + ", Month is: " + $2 + ", Day is: " + $3
+      puts "Year is: " + match_data[1] + ", Month is: " + match_data[2] + ", Day is: " + match_data[3]
       matches_count += 1
       score = 3
     end
 
     # Match (Year, Month, Day, Hours) only: 1 match
-    if $1 && $2 && $3 && $4 && !$5
+    if match_data[1] && match_data[2] && match_data[3] && match_data[4] && !match_data[5]
       puts "(Year, Month, Day, Hours)"
-      puts "Year is: " + $1 + ", Month is: " + $2 + ", Day is: " + $3 +
-            ", Hours: " + $4
+      puts "Year is: " + match_data[1] + ", Month is: " + match_data[2] + ", Day is: " + match_data[3] +
+            ", Hours: " + match_data[4]
       matches_count += 1
       score = 4
     end
 
     # Match (Year, Month, Day, Hours, Minutes) only: 1 match
-    if $1 && $2 && $3 && $4 && $5 && !$6
+    if match_data[1] && match_data[2] && match_data[3] && match_data[4] && match_data[5] && !match_data[6]
       puts "(Year, Month, Day, Hours, Minutes) "
-      puts  "Year is: " + $1 + ", Month is: " + $2 + ", Day is: " + $3 +
-            ", Hours: " + $4 + ", Minutes: " + $5
+      puts  "Year is: " + match_data[1] + ", Month is: " + match_data[2] + ", Day is: " + match_data[3] +
+            ", Hours: " + match_data[4] + ", Minutes: " + match_data[5]
       matches_count += 1
       score = 5
     end
 
     # Match (Year, Month, Day, Hours, Minutes) only: 1 match
-    if $1 && $2 && $3 && $4 && $5 && $6 && !$7
+    if match_data[1] && match_data[2] && match_data[3] && match_data[4] && match_data[5] && match_data[6] && !match_data[7]
       puts "(Year, Month, Day, Hours, Minutes, Seconds)"
-      puts  "Year is: " + $1 + ", Month is: " + $2 + ", Day is: " + $3 +
-            ", Hours: " + $4 + ", Minutes: " + $5 + ", Seconds: " + $6
+      puts  "Year is: " + match_data[1] + ", Month is: " + match_data[2] + ", Day is: " + match_data[3] +
+            ", Hours: " + match_data[4] + ", Minutes: " + match_data[5] + ", Seconds: " + match_data[6]
       matches_count += 1
       score = 6
     end
 
     # Match (Year, Month, Day, Hours, Minutes) only: 1 match
-    if $1 && $2 && $3 && $4 && $5 && $6 && $7
+    if match_data[1] && match_data[2] && match_data[3] && match_data[4] && match_data[5] && match_data[6] && match_data[7]
       puts "(Year, Month, Day, Hours, Minutes, Seconds, Timezone)"
-      puts  "Year is: " + $1 + ", Month is: " + $2 + ", Day is: " + $3 +
-            ", Hours: " + $4 + ", Minutes: " + $5 + ", Seconds: " + $6 +
-            ", Timezone is Zulu + " + $7
+      puts  "Year is: " + match_data[1] + ", Month is: " + match_data[2] + ", Day is: " + match_data[3] +
+            ", Hours: " + match_data[4] + ", Minutes: " + match_data[5] + ", Seconds: " + match_data[6] +
+            ", Timezone is Zulu + " + match_data[7]
       matches_count += 1
       score = 7
     end

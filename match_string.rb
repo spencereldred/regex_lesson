@@ -7,7 +7,7 @@
 # Fill in the regex required to match all three in the regex_find_cat variable.
 # Eg: regex_find_cat = /(cat)/
 
-regex_find_cat = //
+regex_find_cat = /\scat\s/
 
 # Expected Output:
 # Prob 1: I love my cat.

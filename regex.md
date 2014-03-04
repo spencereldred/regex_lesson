@@ -26,7 +26,7 @@
 * <h3> Dogs are not dogmatic about dog things unlike Madog the bad dog.</h3>
 
 ### Ruby Matcher: .match
-* <h3> .match(/regex matcher/, "replacement string")</h3>
+* <h3> string.match(/regex matcher/)</h3>
 * <h3> "I love my cat.".match(/cat/)</h3>
 * <h3> match[0] => cat</h3>
 

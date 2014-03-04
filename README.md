@@ -33,7 +33,9 @@
     string = "I love my cat."
 
     if string.match(/cat/)
+
       puts "I found a match."
+
     end
 
 
